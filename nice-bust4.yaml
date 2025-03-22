@@ -381,7 +381,7 @@ switch:
 # cover:
 cover:
   - platform: bus_t4
-    name: "Nice RB400"
+    name: "Nice Gate"
     id: my_nice_cover
     device_class: gate
   #  address: 0x0003            # drive address
