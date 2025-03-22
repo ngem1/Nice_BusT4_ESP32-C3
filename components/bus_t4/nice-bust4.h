@@ -55,6 +55,7 @@ is an intelligent engine, this value is 1 (adr = 1).
 #include <HardwareSerial.h>
 #include "esphome/core/helpers.h"              // parse strings with built-in tools
 #include <queue>                               // for working with a queue
+#include "driver/uart.h"
 // #include <string>
 // #include "esphome/components/text_sensor/text_sensor.h"
 // #include "esphome/components/text_sensor/template_text_sensor.h"
