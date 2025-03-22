@@ -874,7 +874,7 @@ select:
             args: [ "(id(speed_close_select).index_of(x.c_str())).value_or(0)" ]
 
         - lambda: |-
-            if (x != "other" {
+            if (x != "other") {
               int close_speed_variable;
               switch ((id(speed_close_select).index_of(x.c_str())).value_or(0)) {
                 case 0:
