@@ -476,7 +476,7 @@ uart:
   id: uart_bus
   tx_pin: GPIO43
   rx_pin: GPIO44
-  baud_rate: 9600
+  baud_rate: 19200
  
   # on_boot:
   #   priority: -10
