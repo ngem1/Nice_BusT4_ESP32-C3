@@ -19,7 +19,7 @@ substitutions:
 
 esp32:
   #board: wt32-eth01
-  board: esp32-s3-dev
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -71,9 +71,9 @@ wifi:
   password: !secret wifi_password
 
 # Enable fallback hotspot (captive portal) in case wifi connection fails
-ap:
-  ssid: "${device_name}_fallback"
-  password: "fallbackpass"
+  ap:
+    ssid: "${device_name}_fallback"
+    password: "fallbackpass"
 
 captive_portal:
 
@@ -206,7 +206,7 @@ button:
 
 switch:
   - platform: restart
-    name: "Nice WT32-ETH01 Restart"
+    name: "Nice Bus Restart"
 
 # # disable automatic closing of the gate, if necessary for loading and unloading operations?
 # #auto_close & close_ater_photo
@@ -234,9 +234,9 @@ switch:
 #         my_nice_cover -> NiceBusT4::send_inf_cmd("0003", "04", "80", "99", "00", true, "01");
 #         my_nice_cover -> NiceBusT4::send_inf_cmd("0003", "04", "84", "99", "00", true, "01");                
 
-  - platform: gpio
-    name: "Swiatlo brama"
-    pin: ${light_relay_pin}
+ # - platform: gpio
+  #  name: "Swiatlo brama"
+  #  pin: ${light_relay_pin}
 
   - platform: template
     name: "l1L1 - Auto close" #l1L2 - level 1, option L2
@@ -806,7 +806,7 @@ select:
               //ESP_LOGD("debug", "open_speed_variable_dec: %d", open_speed_variable);
               my_nice_cover -> NiceBusT4::send_inf_cmd("0003", "04", "42", "a9", "00", true, open_speed_variable_hex);
               my_nice_cover -> NiceBusT4::send_inf_cmd("0003", "04", "42", "99", "00", true, "01");
-          }
+            }
         # - lambda: |-
         #     auto index_optional = id(sbs_mode_select).index_of(x.c_str());
         #     int index = index_optional.value_or(0) + 1; //Conversion from optional to int. Indexes are numbered from 0, so we add 1 to get the correct mode number (1 to 8).
