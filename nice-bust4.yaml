@@ -4,8 +4,8 @@
 substitutions:
   device_name: "nice_bus"
   device_name_friendly: "Nice Bus"
-  api_password: !secret     nice_esp32_c3_api_password
-  ota_password: !secret     nice_esp32_c3_ota_password
+  api_password: !secret     nice_esp32_s3_api_password
+  ota_password: !secret     nice_esp32_s3_ota_password
   #mqtt_broker_address: !secret   mqtt_broker_address
   #led_gpio:                 GPIO2
   #DS18B20_pin:              GPIO4
@@ -19,7 +19,7 @@ substitutions:
 
 esp32:
   #board: wt32-eth01
-  board: esp32-c3-dev
+  board: esp32-s3-dev
   framework:
     type: arduino
 
