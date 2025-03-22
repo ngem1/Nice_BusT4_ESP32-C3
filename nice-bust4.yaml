@@ -63,7 +63,7 @@ web_server:
 external_components:
   - source:
       type: git
-      url: https://github.com/ngem1/Nice_BusT4_ESP32-C3
+      url: https://github.com/ngem1/Nice_BusT4_ESP32-S3
     refresh: 0s
 
 wifi:
