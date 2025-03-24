@@ -343,8 +343,8 @@ void NiceBusT4::parse_status_packet(const std::vector<uint8_t> &data) {
           if (is_walky)
             update_position(data[15]);
           else
-            uint16_t pos = (data[16] << 8) + data[17];
-            current_position = (data[16] << 8) + data[17];
+            uint16_t pos = (data[14] << 8) + data[15];
+            current_position = (data[14] << 8) + data[15];
           break;
 
         case INF_STATUS:
